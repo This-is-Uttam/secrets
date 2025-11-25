@@ -12,7 +12,6 @@ dotenv.config()
 // Connection client
 const client = new MongoClient(process.env.MONGO_URI);
 
-console.log(process.env.MONGO_URI);
 client.connect();
 console.log('Connected successfully to server');
 
