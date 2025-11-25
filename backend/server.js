@@ -11,13 +11,15 @@ dotenv.config()
 
 // Connection client
 const client = new MongoClient(process.env.MONGO_URI);
+
+console.log(process.env.MONGO_URI);
 client.connect();
 console.log('Connected successfully to server');
 
 // App & Database
 const dbName = process.env.DB_NAME;
 const app = express()
-const port = 3000
+const port = process.env.PORT
 
 // Middlewares
 app.use(cors())
