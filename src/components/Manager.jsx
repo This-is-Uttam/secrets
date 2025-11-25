@@ -16,13 +16,12 @@ const Manager = () => {
     site: "",
     username: "",
     password: "",
-    id: "",
-    _id: "",
+    id: ""
   });
   const [passwordArray, setpasswordArray] = useState([]);
   const [showPassword, setshowPassword] = useState(false);
 
-  const url = "http://127.0.0.1:3000/";
+  const url = process.env.MONGO_URI;
 
   useEffect(() => {
     getData();
