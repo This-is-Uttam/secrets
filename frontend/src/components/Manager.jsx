@@ -22,6 +22,8 @@ const Manager = () => {
 
   const url = import.meta.env.VITE_API_URL;
 
+  console.log("eploy tes")
+
   useEffect(() => {
     getData();
   }, []);
