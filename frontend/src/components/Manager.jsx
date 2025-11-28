@@ -23,6 +23,7 @@ const Manager = () => {
 
   // const url = process.env.MONGO_URI;
   const url = import.meta.env.VITE_API_URL;
+  console.log("test deploy vercel")
 
   useEffect(() => {
     getData();
