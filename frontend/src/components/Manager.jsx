@@ -11,19 +11,18 @@ import visibilityOffEye from "../assets/visibility_off_eye.svg";
 import { v4 as uuidv4 } from "uuid";
 
 const Manager = () => {
-
   const [form, setform] = useState({
     site: "",
     username: "",
     password: "",
-    id: ""
+    id: "",
   });
   const [passwordArray, setpasswordArray] = useState([]);
   const [showPassword, setshowPassword] = useState(false);
 
   // const url = process.env.MONGO_URI;
   const url = import.meta.env.VITE_API_URL;
-  console.log("test deploy vercel")
+  console.log("Deploy test");
 
   useEffect(() => {
     getData();
@@ -251,7 +250,7 @@ const Manager = () => {
                 <tr key={index}>
                   <td className="py-2 px-4 whitespace-nowrap">{index + 1}</td>
 
-                  <td className="py-2 px-4  whitespace-nowrap" >
+                  <td className="py-2 px-4  whitespace-nowrap">
                     <div className="flex justify-center items-center gap-2 underline">
                       {/* make the link single-line and truncated if needed */}
                       <Link
@@ -271,7 +270,7 @@ const Manager = () => {
                     </div>
                   </td>
 
-                  <td className="py-2 px-4  whitespace-nowrap" >
+                  <td className="py-2 px-4  whitespace-nowrap">
                     <div className="flex justify-center items-center gap-2">
                       <span className="block truncate max-w-[150px] whitespace-nowrap">
                         {item.username}
@@ -285,7 +284,7 @@ const Manager = () => {
                     </div>
                   </td>
 
-                  <td className="py-2 px-4  whitespace-nowrap" >
+                  <td className="py-2 px-4  whitespace-nowrap">
                     <div className="flex justify-center items-center gap-2">
                       <span className="block truncate max-w-[150px] whitespace-nowrap">
                         {"•".repeat(item.password.length)}
