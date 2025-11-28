@@ -12,7 +12,7 @@ const Navbar = () => {
       <div className="bg-[#af120c] w-screen h-[50px]   px-4 flex justify-between">
         <div className="flex gap-1 py-2">
           <img width={30} src={logo} alt="logo" />
-          <div className="text-2xl font-bold">Secrets</div>
+          <div className="text-2xl font-bold">Secets</div>
         </div>
 
         {console.log(`isAuthenticated:  ${isAuthenticated}`)}
