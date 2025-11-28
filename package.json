@@ -12,6 +12,7 @@
   "dependencies": {
     "@auth0/auth0-react": "^2.9.0",
     "@tailwindcss/vite": "^4.1.16",
+    "dotenv": "^17.2.3",
     "mongoose": "^8.20.1",
     "next-auth": "^4.24.13",
     "react": "^19.1.1",
