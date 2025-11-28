@@ -2,7 +2,7 @@ import React from "react";
 import { ToastContainer, toast } from "react-toastify";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import HrLine from "../components/HrLine";
+import HrLine from "./HrLine";
 import edit from "../assets/edit.svg";
 import copy from "../assets/copy.svg";
 import deleteIcon from "../assets/delete_icon.svg";
@@ -21,7 +21,8 @@ const Manager = () => {
   const [passwordArray, setpasswordArray] = useState([]);
   const [showPassword, setshowPassword] = useState(false);
 
-  const url = process.env.MONGO_URI;
+  // const url = process.env.MONGO_URI;
+  const url = import.meta.env.VITE_API_URL;
 
   useEffect(() => {
     getData();
@@ -100,7 +101,7 @@ const Manager = () => {
 
   const deleteInDb = async (id) => {
     try {
-      const response = await fetch(url, {
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/delete`, {
         method: "DELETE",
         body: JSON.stringify({ id: id }),
         headers: {
